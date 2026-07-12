@@ -1,36 +1,72 @@
-<!DOCTYPE html>
-<html>
+<main class="main-content">
 
-<head>
+    <div class="maintenance-grid">
 
-    <title>Maintenance</title>
+        <div class="maintenance-form-card">
 
-    <link rel="stylesheet" href="css/style.css">
-     <link rel="stylesheet" href="css/sidebar.css">
-    <link rel="stylesheet" href="css/layout.css">
-    <link rel="stylesheet" href="css/maintenance.css">
+            <h2>Log Service Record</h2>
 
+            <select id="vehicleSelect"></select>
 
-</head>
+            <input
+                id="serviceType"
+                placeholder="Service Type"
+            >
 
-<body>
+            <input
+                id="cost"
+                type="number"
+                placeholder="Cost"
+            >
 
-    <div class="app">
+            <input
+                id="date"
+                type="date"
+            >
 
-        <div id="sidebar-container"></div>
+            <select id="status">
 
-        <div class="content">
+                <option value="In Shop">
+                    In Shop
+                </option>
 
-            <h1>Maintenance</h1>
+                <option value="Completed">
+                    Completed
+                </option>
 
-            <p>This is maintenance page.</p>
+            </select>
+
+            <button id="saveBtn">
+                Save Record
+            </button>
+
+            <div class="rules">
+
+                <p class="available">
+                    Available → In Shop
+                </p>
+
+                <p class="shop">
+                    In Shop → Available
+                </p>
+
+                <small>
+                    Vehicles in shop are removed
+                    from dispatch pool.
+                </small>
+
+            </div>
+
+        </div>
+
+        <div class="service-card">
+
+            <h2>Service Log</h2>
+
+            <div id="serviceList"></div>
 
         </div>
 
     </div>
 
-    <script src="js/sidebar.js"></script>
-
-</body>
-
-</html>
+</main>

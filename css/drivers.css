@@ -1,72 +1,144 @@
+/* =========================
+   PAGE HEADER
+========================= */
+
 .page-header{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    margin-bottom:25px;
+    margin-bottom:30px;
 }
 
 .page-header h1{
-    font-size:32px;
+    font-size:34px;
+    color:#111827;
+    margin-bottom:5px;
 }
 
 .page-header p{
-    color:gray;
+    color:#6b7280;
+    font-size:15px;
 }
 
-.add-btn{
+/* =========================
+   BUTTONS
+========================= */
+
+.primary-btn{
     background:#f59e0b;
     color:white;
     border:none;
-    padding:12px 20px;
-    border-radius:10px;
+    padding:14px 24px;
+    border-radius:14px;
+    font-size:15px;
+    font-weight:600;
     cursor:pointer;
+    transition:0.3s;
 }
 
-.search-row{
-    margin-bottom:20px;
+.primary-btn:hover{
+    background:#d97706;
+    transform:translateY(-2px);
 }
 
-.search-row input{
-    width:350px;
-    padding:12px;
-    border:1px solid #ddd;
-    border-radius:10px;
-}
-
-.driver-form{
+.secondary-btn{
     background:white;
-    padding:20px;
-    border-radius:15px;
-    margin-bottom:25px;
+    color:#374151;
+    border:1px solid #d1d5db;
+    padding:14px 24px;
+    border-radius:14px;
+    font-size:15px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.secondary-btn:hover{
+    background:#f9fafb;
+}
+
+/* =========================
+   FILTER BAR
+========================= */
+
+.filters{
+    display:flex;
+    gap:20px;
+    margin-bottom:30px;
+    flex-wrap:wrap;
+}
+
+.filters input,
+.filters select{
+    padding:14px 18px;
+    border:1px solid #e5e7eb;
+    border-radius:14px;
+    background:white;
+    font-size:14px;
+    outline:none;
+    transition:0.3s;
+}
+
+.filters input:focus,
+.filters select:focus{
+    border-color:#f59e0b;
+    box-shadow:0 0 0 3px rgba(245,158,11,0.2);
+}
+
+#searchInput{
+    width:350px;
+}
+
+/* =========================
+   VEHICLE FORM
+========================= */
+
+.vehicle-form{
+    background:white;
+    padding:30px;
+    border-radius:24px;
+    margin-bottom:30px;
 
     display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:15px;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+
+    box-shadow:0 8px 24px rgba(0,0,0,0.05);
 }
 
-.driver-form input,
-.driver-form select{
-    padding:12px;
-    border:1px solid #ddd;
-    border-radius:10px;
+.vehicle-form input,
+.vehicle-form select{
+    padding:14px;
+    border:1px solid #e5e7eb;
+    border-radius:14px;
+    outline:none;
+    font-size:14px;
 }
 
-.driver-form button{
-    background:#f59e0b;
-    color:white;
-    border:none;
-    border-radius:10px;
-    cursor:pointer;
+.vehicle-form input:focus,
+.vehicle-form select:focus{
+    border-color:#f59e0b;
+    box-shadow:0 0 0 3px rgba(245,158,11,0.2);
 }
 
 .hidden{
     display:none;
 }
 
-.table-card{
+.form-buttons{
+    display:flex;
+    gap:15px;
+    grid-column:span 2;
+}
+
+/* =========================
+   TABLE CARD
+========================= */
+
+.table-container{
     background:white;
-    padding:20px;
-    border-radius:20px;
+    border-radius:24px;
+    overflow:hidden;
+    box-shadow:0 8px 24px rgba(0,0,0,0.05);
 }
 
 table{
@@ -74,24 +146,172 @@ table{
     border-collapse:collapse;
 }
 
-th,
+thead{
+    background:#fff7ed;
+}
+
+th{
+    padding:20px;
+    text-align:left;
+    font-size:14px;
+    color:#92400e;
+    font-weight:700;
+}
+
 td{
-    padding:18px;
-    border-bottom:1px solid #eee;
+    padding:18px 20px;
+    border-bottom:1px solid #f3f4f6;
+    font-size:14px;
+}
+
+tbody tr{
+    transition:0.25s;
+}
+
+tbody tr:hover{
+    background:#fffaf0;
+}
+
+/* =========================
+   STATUS BADGES
+========================= */
+
+.status{
+    padding:8px 14px;
+    border-radius:999px;
+    font-size:13px;
+    font-weight:600;
+    display:inline-block;
 }
 
 .available{
-    color:#16a34a;
+    background:#dcfce7;
+    color:#15803d;
 }
 
 .trip{
-    color:#2563eb;
+    background:#dbeafe;
+    color:#1d4ed8;
 }
 
-.off{
+.maintenance{
+    background:#fef3c7;
+    color:#92400e;
+}
+
+.retired{
+    background:#fee2e2;
+    color:#b91c1c;
+}
+
+/* =========================
+   ACTION BUTTONS
+========================= */
+
+.action-btn{
+    border:none;
+    padding:10px 14px;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:13px;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.edit-btn{
+    background:#dbeafe;
+    color:#1d4ed8;
+}
+
+.edit-btn:hover{
+    background:#bfdbfe;
+}
+
+.delete-btn{
+    background:#fee2e2;
+    color:#b91c1c;
+}
+
+.delete-btn:hover{
+    background:#fecaca;
+}
+
+/* =========================
+   VEHICLE STATS
+========================= */
+
+.vehicle-stats{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+    margin-bottom:30px;
+}
+
+.stat-card{
+    background:white;
+    padding:24px;
+    border-radius:24px;
+    box-shadow:0 8px 24px rgba(0,0,0,0.05);
+    transition:0.3s;
+}
+
+.stat-card:hover{
+    transform:translateY(-5px);
+}
+
+.stat-card h2{
+    font-size:36px;
+    color:#f59e0b;
+    margin-bottom:8px;
+}
+
+.stat-card p{
     color:#6b7280;
+    font-size:14px;
 }
 
-.suspended{
-    color:#ea580c;
+/* =========================
+   EMPTY STATE
+========================= */
+
+.empty-state{
+    text-align:center;
+    padding:60px;
+    color:#9ca3af;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:1200px){
+
+    .vehicle-stats{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+@media(max-width:768px){
+
+    .vehicle-form{
+        grid-template-columns:1fr;
+    }
+
+    .form-buttons{
+        grid-column:span 1;
+    }
+
+    .vehicle-stats{
+        grid-template-columns:1fr;
+    }
+
+    .filters{
+        flex-direction:column;
+    }
+
+    #searchInput{
+        width:100%;
+    }
+
 }

@@ -1,36 +1,85 @@
-
 <!DOCTYPE html>
 <html>
 
 <head>
 
-    <title>Trips</title>
+    <title>Trip Dispatcher</title>
 
-    <link rel="stylesheet" href="css/style.css">
-     <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/sidebar.css">
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/trips.css">
-
 
 </head>
 
 <body>
 
-    <div class="app">
+<div class="app">
 
-        <div id="sidebar-container"></div>
+    <div id="sidebar-container"></div>
 
-        <div class="content">
+    <main class="main-content">
 
-            <h1>Trips</h1>
+        <div class="trip-grid">
 
-            <p>This is trips page.</p>
+            <!-- LEFT PANEL -->
+
+            <div class="dispatch-card">
+
+                <h2>Create Trip</h2>
+
+                <input id="source" placeholder="Source">
+
+                <input id="destination" placeholder="Destination">
+
+                <select id="vehicleSelect"></select>
+
+                <select id="driverSelect"></select>
+
+                <input
+                    type="number"
+                    id="cargoWeight"
+                    placeholder="Cargo Weight (kg)"
+                >
+
+                <input
+                    type="number"
+                    id="distance"
+                    placeholder="Distance (km)"
+                >
+
+                <div id="capacityWarning"></div>
+
+                <div class="button-row">
+                    <button id="dispatchBtn">
+                        Dispatch Trip
+                    </button>
+
+                    <button id="cancelBtn">
+                        Cancel
+                    </button>
+                </div>
+
+            </div>
+
+            <!-- RIGHT PANEL -->
+
+            <div class="live-board">
+
+                <h2>Live Board</h2>
+
+                <div id="tripList"></div>
+
+            </div>
 
         </div>
 
-    </div>
+    </main>
 
-    <script src="js/sidebar.js"></script>
+</div>
+
+<script src="js/sidebar.js"></script>
+<script src="js/storage.js"></script>
+<script src="js/trips.js"></script>
 
 </body>
 

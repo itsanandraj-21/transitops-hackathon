@@ -1,0 +1,94 @@
+.trip-grid{
+    display:grid;
+    grid-template-columns:420px 1fr;
+    gap:30px;
+}
+
+.dispatch-card,
+.live-board{
+    background:white;
+    padding:25px;
+    border-radius:20px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.05);
+}
+
+.dispatch-card h2,
+.live-board h2{
+    margin-bottom:25px;
+}
+
+.dispatch-card input,
+.dispatch-card select{
+    width:100%;
+    padding:14px;
+    border:1px solid #ddd;
+    border-radius:10px;
+    margin-bottom:15px;
+}
+
+.button-row{
+    display:flex;
+    gap:15px;
+}
+
+#dispatchBtn{
+    flex:1;
+    background:#f59e0b;
+    color:white;
+    border:none;
+    padding:14px;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+#cancelBtn{
+    flex:1;
+    border:none;
+    padding:14px;
+    border-radius:10px;
+    cursor:pointer;
+    background:#e5e7eb;
+}
+
+.trip-card{
+    border:1px solid #eee;
+    border-radius:15px;
+    padding:20px;
+    margin-bottom:20px;
+}
+
+.trip-card h3{
+    margin-bottom:10px;
+}
+
+.trip-route{
+    color:#6b7280;
+    margin-bottom:15px;
+}
+
+.status{
+    display:inline-block;
+    padding:8px 14px;
+    border-radius:20px;
+    font-size:14px;
+}
+
+.dispatched{
+    background:#dbeafe;
+    color:#2563eb;
+}
+
+.completed{
+    background:#dcfce7;
+    color:#16a34a;
+}
+
+.cancelled{
+    background:#fee2e2;
+    color:#dc2626;
+}
+
+.warning{
+    color:red;
+    margin-bottom:15px;
+}

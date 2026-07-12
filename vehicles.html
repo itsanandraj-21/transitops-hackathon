@@ -1,35 +1,149 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle Registry</title>
 
-    <title>Vehicles</title>
-
-    <link rel="stylesheet" href="css/style.css">
-     <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/sidebar.css">
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/vehicles.css">
-
-
 </head>
 
 <body>
 
     <div class="app">
 
+        <!-- Sidebar -->
         <div id="sidebar-container"></div>
 
-        <div class="content">
+        <!-- Main Content -->
+        <main class="main-content">
 
-            <h1>Vehicles</h1>
+            <!-- Page Header -->
+            <div class="page-header">
+                <div>
+                    <h1>Vehicle Registry</h1>
+                    <p>Manage all vehicles in your fleet.</p>
+                </div>
 
-            <p>This is vehicles page.</p>
+                <button id="openFormBtn" class="primary-btn">
+                    + Add Vehicle
+                </button>
+            </div>
 
-        </div>
+            <!-- Search and Filters -->
+            <div class="filters">
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search by registration or model..."
+                >
+
+                <select id="typeFilter">
+                    <option value="All">All Types</option>
+                    <option value="Truck">Truck</option>
+                    <option value="Van">Van</option>
+                    <option value="Mini Truck">Mini Truck</option>
+                    <option value="Bus">Bus</option>
+                </select>
+
+                <select id="statusFilter">
+                    <option value="All">All Status</option>
+                    <option value="Available">Available</option>
+                    <option value="On Trip">On Trip</option>
+                    <option value="Maintenance">Maintenance</option>
+                    <option value="Retired">Retired</option>
+                </select>
+
+            </div>
+
+            <!-- Add Vehicle Form -->
+            <div id="vehicleForm" class="vehicle-form hidden">
+
+                <input type="text" id="regNo" placeholder="Registration Number">
+
+                <input type="text" id="model" placeholder="Model">
+
+                <select id="vehicleType">
+                    <option value="">Select Type</option>
+                    <option>Truck</option>
+                    <option>Van</option>
+                    <option>Mini Truck</option>
+                    <option>Bus</option>
+                </select>
+
+                <input type="text" id="capacity" placeholder="Capacity">
+
+                <input type="number" id="odometer" placeholder="Odometer">
+
+                <input type="number" id="purchaseCost" placeholder="Purchase Cost">
+
+                <select id="fuelType">
+                    <option value="">Fuel Type</option>
+                    <option>Diesel</option>
+                    <option>Petrol</option>
+                    <option>CNG</option>
+                    <option>Electric</option>
+                </select>
+
+                <input type="date" id="insuranceExpiry">
+
+                <input type="date" id="lastService">
+
+                <select id="vehicleStatus">
+                    <option>Available</option>
+                    <option>On Trip</option>
+                    <option>Maintenance</option>
+                    <option>Retired</option>
+                </select>
+
+                <div class="form-buttons">
+                    <button id="addVehicleBtn" class="primary-btn">
+                        Save Vehicle
+                    </button>
+
+                    <button id="cancelBtn" class="secondary-btn">
+                        Cancel
+                    </button>
+                </div>
+
+            </div>
+
+            <!-- Vehicle Table -->
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Reg No</th>
+                            <th>Model</th>
+                            <th>Type</th>
+                            <th>Capacity</th>
+                            <th>Fuel</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="vehicleTableBody">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </main>
 
     </div>
 
     <script src="js/sidebar.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/vehicles.js"></script>
 
 </body>
 

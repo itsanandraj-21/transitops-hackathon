@@ -3,34 +3,192 @@
 
 <head>
 
-    <title>Expenses</title>
+    <title>Fuel & Expenses</title>
 
-    <link rel="stylesheet" href="css/style.css">
-     <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/sidebar.css">
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/expenses.css">
-
 
 </head>
 
 <body>
 
-    <div class="app">
+<div class="app">
 
-        <div id="sidebar-container"></div>
+    <div id="sidebar-container"></div>
 
-        <div class="content">
+    <main class="main-content">
 
-            <h1>Expenses</h1>
+        <div class="topbar">
 
-            <p>This is expenses page.</p>
+            <input
+                type="text"
+                placeholder="Search expenses..."
+                class="search-box"
+            >
+
+            <div class="profile">
+                <span>Dispatcher</span>
+                <div class="avatar">AR</div>
+            </div>
 
         </div>
 
-    </div>
+        <h1>Fuel & Expenses</h1>
+        <p class="subtitle">
+            Track fuel and operational expenses.
+        </p>
 
-    <script src="js/sidebar.js"></script>
+        <!-- Summary Cards -->
+
+        <section class="expense-cards">
+
+            <div class="expense-card">
+                <h3 id="fuelTotal">₹0</h3>
+                <p>Fuel Cost</p>
+            </div>
+
+            <div class="expense-card">
+                <h3 id="maintenanceTotal">₹0</h3>
+                <p>Maintenance</p>
+            </div>
+
+            <div class="expense-card">
+                <h3 id="miscTotal">₹0</h3>
+                <p>Toll & Misc</p>
+            </div>
+
+            <div class="expense-card">
+                <h3 id="grandTotal">₹0</h3>
+                <p>Total Cost</p>
+            </div>
+
+        </section>
+
+        <div class="expense-grid">
+
+            <!-- Fuel Form -->
+
+            <div class="form-card">
+
+                <h2>Log Fuel</h2>
+
+                <select id="fuelVehicle">
+                    <option value="">Select Vehicle</option>
+                </select>
+
+                <input
+                    type="number"
+                    id="liters"
+                    placeholder="Liters"
+                >
+
+                <input
+                    type="number"
+                    id="fuelCost"
+                    placeholder="Fuel Cost"
+                >
+
+                <input
+                    type="date"
+                    id="fuelDate"
+                >
+
+                <button id="saveFuel">
+                    Log Fuel
+                </button>
+
+            </div>
+
+            <!-- Expense Form -->
+
+            <div class="form-card">
+
+                <h2>Add Expense</h2>
+
+                <input
+                    type="text"
+                    id="tripId"
+                    placeholder="Trip ID"
+                >
+
+                <input
+                    type="number"
+                    id="toll"
+                    placeholder="Toll Amount"
+                >
+
+                <input
+                    type="number"
+                    id="otherExpense"
+                    placeholder="Other Expense"
+                >
+
+                <button id="saveExpense">
+                    Add Expense
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- Fuel Table -->
+
+        <div class="table-card">
+
+            <h2>Fuel Logs</h2>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>Vehicle</th>
+                        <th>Date</th>
+                        <th>Liters</th>
+                        <th>Cost</th>
+                    </tr>
+
+                </thead>
+
+                <tbody id="fuelTable"></tbody>
+
+            </table>
+
+        </div>
+
+        <!-- Expense Table -->
+
+        <div class="table-card">
+
+            <h2>Other Expenses</h2>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>Trip</th>
+                        <th>Toll</th>
+                        <th>Other</th>
+                        <th>Total</th>
+                    </tr>
+
+                </thead>
+
+                <tbody id="expenseTable"></tbody>
+
+            </table>
+
+        </div>
+
+    </main>
+
+</div>
+
+<script src="js/sidebar.js"></script>
+<script src="js/storage.js"></script>
+<script src="js/expenses.js"></script>
 
 </body>
-
 </html>

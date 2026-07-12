@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 
@@ -5,32 +6,150 @@
 
     <title>Settings</title>
 
-    <link rel="stylesheet" href="css/style.css">
-     <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/sidebar.css">
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/settings.css">
-
 
 </head>
 
 <body>
 
-    <div class="app">
+<div class="app">
 
-        <div id="sidebar-container"></div>
+    <div id="sidebar-container"></div>
 
-        <div class="content">
+    <main class="main-content">
 
-            <h1>Settings</h1>
+        <div class="topbar">
 
-            <p>This is settings page.</p>
+            <input
+                type="text"
+                class="search-box"
+                placeholder="Search..."
+            >
+
+            <div class="profile">
+                <span>Dispatcher</span>
+                <div class="avatar">AR</div>
+            </div>
 
         </div>
 
-    </div>
+        <h1>Settings & RBAC</h1>
 
-    <script src="js/sidebar.js"></script>
+        <p class="subtitle">
+            System settings and role permissions
+        </p>
+
+        <div class="settings-grid">
+
+            <!-- LEFT -->
+
+            <div class="settings-card">
+
+                <h2>General Settings</h2>
+
+                <label>Depot Name</label>
+                <input
+                    type="text"
+                    id="depotName"
+                    value="Gandhinagar Depot"
+                >
+
+                <label>Currency</label>
+                <input
+                    type="text"
+                    id="currency"
+                    value="INR (₹)"
+                >
+
+                <label>Distance Unit</label>
+                <input
+                    type="text"
+                    id="distanceUnit"
+                    value="Kilometers"
+                >
+
+                <button id="saveSettingsBtn">
+                    Save Changes
+                </button>
+
+            </div>
+
+            <!-- RIGHT -->
+
+            <div class="settings-card">
+
+                <h2>Role Based Access Control</h2>
+
+                <table>
+
+                    <thead>
+
+                    <tr>
+                        <th>Role</th>
+                        <th>Fleet</th>
+                        <th>Drivers</th>
+                        <th>Trips</th>
+                        <th>Expenses</th>
+                        <th>Analytics</th>
+                    </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                    <tr>
+                        <td>Fleet Manager</td>
+                        <td>✔</td>
+                        <td>✔</td>
+                        <td>✔</td>
+                        <td>✔</td>
+                        <td>✔</td>
+                    </tr>
+
+                    <tr>
+                        <td>Dispatcher</td>
+                        <td>View</td>
+                        <td>-</td>
+                        <td>✔</td>
+                        <td>-</td>
+                        <td>-</td>
+                    </tr>
+
+                    <tr>
+                        <td>Safety Officer</td>
+                        <td>-</td>
+                        <td>✔</td>
+                        <td>View</td>
+                        <td>-</td>
+                        <td>-</td>
+                    </tr>
+
+                    <tr>
+                        <td>Financial Analyst</td>
+                        <td>View</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>✔</td>
+                        <td>✔</td>
+                    </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </main>
+
+</div>
+
+<script src="js/sidebar.js"></script>
+<script src="js/storage.js"></script>
+<script src="js/settings.js"></script>
 
 </body>
-
 </html>

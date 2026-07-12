@@ -1,0 +1,119 @@
+.subtitle{
+    color:#6b7280;
+    margin-bottom:30px;
+}
+
+.stats-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+    margin-bottom:30px;
+}
+
+.stat-card{
+    background:white;
+    padding:25px;
+    border-radius:18px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.05);
+}
+
+.stat-card p{
+    color:#6b7280;
+    margin-bottom:10px;
+}
+
+.stat-card h2{
+    font-size:34px;
+}
+
+.blue{
+    border-left:6px solid #3b82f6;
+}
+
+.green{
+    border-left:6px solid #22c55e;
+}
+
+.orange{
+    border-left:6px solid #f59e0b;
+}
+
+.analytics-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:25px;
+    margin-bottom:30px;
+}
+
+.chart-card{
+    background:white;
+    padding:25px;
+    border-radius:18px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.05);
+}
+
+.bars{
+    display:flex;
+    align-items:flex-end;
+    gap:15px;
+    height:220px;
+    margin-top:25px;
+}
+
+.bar{
+    width:50px;
+    background:#3b82f6;
+    border-radius:10px 10px 0 0;
+}
+
+.vehicle-cost{
+    margin-top:25px;
+}
+
+.progress{
+    width:100%;
+    height:18px;
+    background:#e5e7eb;
+    border-radius:20px;
+    overflow:hidden;
+    margin-top:10px;
+}
+
+.fill{
+    height:100%;
+}
+
+.red{
+    width:90%;
+    background:#ef4444;
+}
+
+.orange{
+    width:45%;
+    background:#f59e0b;
+}
+
+.blue{
+    width:20%;
+    background:#3b82f6;
+}
+
+.table-card{
+    background:white;
+    padding:25px;
+    border-radius:18px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.05);
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:20px;
+}
+
+th,
+td{
+    padding:16px;
+    border-bottom:1px solid #eee;
+    text-align:left;
+}

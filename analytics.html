@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Analytics</title>
+
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/analytics.css">
+
+</head>
+
+<body>
+
+<div class="app">
+
+    <div id="sidebar-container"></div>
+
+    <main class="main-content">
+
+        <div class="topbar">
+
+            <input
+                type="text"
+                class="search-box"
+                placeholder="Search..."
+            >
+
+            <div class="profile">
+                <span>Dispatcher</span>
+                <div class="avatar">AR</div>
+            </div>
+
+        </div>
+
+        <h1>Reports & Analytics</h1>
+
+        <p class="subtitle">
+            Fleet performance and operational insights
+        </p>
+
+        <!-- KPI CARDS -->
+
+        <section class="stats-grid">
+
+            <div class="stat-card blue">
+                <p>Fuel Efficiency</p>
+                <h2 id="fuelEfficiency">0 km/l</h2>
+            </div>
+
+            <div class="stat-card green">
+                <p>Fleet Utilization</p>
+                <h2 id="fleetUtilization">0%</h2>
+            </div>
+
+            <div class="stat-card orange">
+                <p>Operational Cost</p>
+                <h2 id="operationalCost">₹0</h2>
+            </div>
+
+            <div class="stat-card green">
+                <p>Vehicle ROI</p>
+                <h2 id="vehicleROI">0%</h2>
+            </div>
+
+        </section>
+
+        <!-- CHARTS -->
+
+        <div class="analytics-grid">
+
+            <div class="chart-card">
+
+                <h3>Monthly Revenue</h3>
+
+                <div class="bars">
+
+                    <div class="bar" style="height:80px"></div>
+                    <div class="bar" style="height:110px"></div>
+                    <div class="bar" style="height:100px"></div>
+                    <div class="bar" style="height:140px"></div>
+                    <div class="bar" style="height:130px"></div>
+                    <div class="bar" style="height:170px"></div>
+                    <div class="bar" style="height:160px"></div>
+
+                </div>
+
+            </div>
+
+            <div class="chart-card">
+
+                <h3>Most Expensive Vehicles</h3>
+
+                <div class="vehicle-cost">
+
+                    <span>TRUCK-11</span>
+
+                    <div class="progress">
+                        <div class="fill red"></div>
+                    </div>
+
+                </div>
+
+                <div class="vehicle-cost">
+
+                    <span>MINI-03</span>
+
+                    <div class="progress">
+                        <div class="fill orange"></div>
+                    </div>
+
+                </div>
+
+                <div class="vehicle-cost">
+
+                    <span>VAN-05</span>
+
+                    <div class="progress">
+                        <div class="fill blue"></div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- TABLE -->
+
+        <div class="table-card">
+
+            <h2>Cost Breakdown</h2>
+
+            <table>
+
+                <thead>
+
+                <tr>
+                    <th>Category</th>
+                    <th>Amount</th>
+                </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>Fuel</td>
+                        <td id="fuelCostTable">₹0</td>
+                    </tr>
+
+                    <tr>
+                        <td>Maintenance</td>
+                        <td id="maintenanceCostTable">₹0</td>
+                    </tr>
+
+                    <tr>
+                        <td>Toll & Misc</td>
+                        <td id="miscCostTable">₹0</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </main>
+
+</div>
+
+<script src="js/sidebar.js"></script>
+<script src="js/storage.js"></script>
+<script src="js/analytics.js"></script>
+
+</body>
+</html>

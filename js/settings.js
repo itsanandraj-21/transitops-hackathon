@@ -68,3 +68,11 @@ function loadSettings(){
     ).value =
     settings.distanceUnit;
 }
+if(
+    localStorage.getItem(
+        "loggedIn"
+    ) !== "true"
+){
+    window.location.href =
+    "login.html";
+}

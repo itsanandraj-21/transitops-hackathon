@@ -199,3 +199,11 @@ function removeVehicle(index) {
 
     renderVehicles(vehicles);
 }
+if(
+    localStorage.getItem(
+        "loggedIn"
+    ) !== "true"
+){
+    window.location.href =
+    "login.html";
+}

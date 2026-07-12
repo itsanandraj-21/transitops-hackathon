@@ -45,3 +45,11 @@ function updateItem(key, index, newData) {
 function clearData(key) {
     localStorage.removeItem(key);
 }
+if(
+    localStorage.getItem(
+        "loggedIn"
+    ) !== "true"
+){
+    window.location.href =
+    "login.html";
+}

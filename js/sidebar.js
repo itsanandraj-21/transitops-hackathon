@@ -16,7 +16,7 @@ const sidebarHTML = `
         <li><a href="trips.html">Dispatcher</a></li>
         <li><a href="maintenance.html">Maintenance</a></li>
         <li><a href="expenses.html">Expenses</a></li>
-        <li><a href="reports.html">Analytics</a></li>
+        <li><a href="analytics.html">Analytics</a></li>
         <li><a href="settings.html">⚙ Settings</a></li>
     </ul>
 
@@ -24,3 +24,11 @@ const sidebarHTML = `
 `;
 
 document.getElementById("sidebar-container").innerHTML = sidebarHTML;
+if(
+    localStorage.getItem(
+        "loggedIn"
+    ) !== "true"
+){
+    window.location.href =
+    "login.html";
+}

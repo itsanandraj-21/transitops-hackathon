@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Signup</title>
+
+    <link rel="stylesheet" href="css/auth.css">
+
+</head>
+
+<body>
+
+<div class="auth-container">
+
+    <div class="auth-card">
+
+        <h1>TransitOps</h1>
+
+        <h2>Create Account</h2>
+
+        <input
+            type="text"
+            id="name"
+            placeholder="Full Name"
+        >
+
+        <input
+            type="email"
+            id="email"
+            placeholder="Email"
+        >
+
+        <input
+            type="password"
+            id="password"
+            placeholder="Password"
+        >
+
+        <select id="role">
+
+            <option value="dispatcher">
+                Dispatcher
+            </option>
+
+            <option value="fleet_manager">
+                Fleet Manager
+            </option>
+
+            <option value="maintenance">
+                Maintenance
+            </option>
+
+            <option value="finance">
+                Finance
+            </option>
+
+            <option value="safety">
+                Safety Officer
+            </option>
+
+        </select>
+
+        <button id="signupBtn">
+            Create Account
+        </button>
+
+        <p class="switch">
+
+            Already have an account?
+
+            <a href="login.html">
+                Login
+            </a>
+
+        </p>
+
+    </div>
+
+</div>
+
+<script src="js/signup.js"></script>
+
+</body>
+</html>

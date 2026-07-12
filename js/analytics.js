@@ -70,3 +70,12 @@ document.getElementById(
     "vehicleROI"
 ).innerText =
 `14.2%`;
+
+if(
+    localStorage.getItem(
+        "loggedIn"
+    ) !== "true"
+){
+    window.location.href =
+    "login.html";
+}

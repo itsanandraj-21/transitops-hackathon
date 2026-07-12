@@ -132,3 +132,11 @@ function deleteDriver(index){
     renderDrivers();
 
 }
+if(
+    localStorage.getItem(
+        "loggedIn"
+    ) !== "true"
+){
+    window.location.href =
+    "login.html";
+}

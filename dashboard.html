@@ -6,6 +6,9 @@
     <title>Dashboard</title>
 
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/dashboard.css">
 
 </head>
 
@@ -15,17 +18,130 @@
 
         <div id="sidebar-container"></div>
 
-        <div class="content">
+        <main class="main-content">
 
-            <h1>Dashboard</h1>
+            <header class="topbar">
 
-            <p>This is dashboard page.</p>
+                <input type="text" placeholder="Search vehicles, drivers, trips..." class="search-box">
 
-        </div>
+                <div class="profile">
+                    <span>Dispatcher</span>
+                    <div class="avatar">AR</div>
+                </div>
+
+            </header>
+
+
+            <section class="stats">
+
+
+                <div class="card">
+                    <h3>53</h3>
+                    <p>Active Vehicles</p>
+                </div>
+
+                <div class="card">
+                    <h3>42</h3>
+                    <p>Available Vehicles</p>
+                </div>
+
+                <div class="card">
+                    <h3>05</h3>
+                    <p>Vehicles in Maintenance</p>
+                </div>
+
+                <div class="card">
+                    <h3>18</h3>
+                    <p>Active Trips</p>
+                </div>
+
+                <div class="card">
+                    <h3>81%</h3>
+                    <p>Fleet Utilization</p>
+                </div>
+
+            </section>
+
+
+
+            </section>
+
+            <section class="dashboard-grid">
+
+                <div class="table-card">
+
+                    <h2>Recent Trips</h2>
+
+                    <table>
+
+                        <tr>
+                            <th>Trip</th>
+                            <th>Vehicle</th>
+                            <th>Driver</th>
+                            <th>Status</th>
+                        </tr>
+
+                        <tr>
+                            <td>TR001</td>
+                            <td>VAN-05</td>
+                            <td>Alex</td>
+                            <td>
+                                <span class="badge active">
+                                    On Trip
+                                </span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>TR002</td>
+                            <td>TRK-12</td>
+                            <td>John</td>
+                            <td>
+                                <span class="badge complete">
+                                    Completed
+                                </span>
+                            </td>
+                        </tr>
+
+                    </table>
+
+                </div>
+
+                <div class="status-card">
+
+                    <div class="status-item">
+                        <span>Available (42)</span>
+                        <div class="bar">
+                            <div class="progress available"></div>
+                        </div>
+                    </div>
+
+                    <div class="status-item">
+                        <span>On Trip (18)</span>
+                        <div class="bar">
+                            <div class="progress trip"></div>
+                        </div>
+                    </div>
+
+                    <div class="status-item">
+                        <span>Maintenance (5)</span>
+                        <div class="bar">
+                            <div class="progress shop"></div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+        </main>
+
+
+
 
     </div>
 
     <script src="js/sidebar.js"></script>
+    <script src="js/dashboard.js"></script>
 
 </body>
 

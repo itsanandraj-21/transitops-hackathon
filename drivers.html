@@ -2,35 +2,110 @@
 <html>
 
 <head>
-
     <title>Drivers</title>
 
-    <link rel="stylesheet" href="css/style.css">
-     <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/sidebar.css">
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/drivers.css">
-
-
 </head>
 
 <body>
 
-    <div class="app">
+<div class="app">
 
-        <div id="sidebar-container"></div>
+    <div id="sidebar-container"></div>
 
-        <div class="content">
+    <main class="main-content">
 
-            <h1>Drivers</h1>
+        <div class="page-header">
 
-            <p>This is drivers page.</p>
+            <div>
+                <h1>Drivers & Safety Profiles</h1>
+                <p>Manage drivers and safety compliance.</p>
+            </div>
+
+            <button id="showFormBtn" class="add-btn">
+                + Add Driver
+            </button>
 
         </div>
 
-    </div>
+        <div class="search-row">
 
-    <script src="js/sidebar.js"></script>
+            <input
+                type="text"
+                id="searchDriver"
+                placeholder="Search driver..."
+            >
+
+        </div>
+
+        <!-- Form -->
+
+        <div id="driverForm" class="driver-form hidden">
+
+            <input type="text" id="driverName" placeholder="Driver Name">
+
+            <input type="text" id="licenseNo" placeholder="License Number">
+
+            <select id="licenseType">
+                <option>LMV</option>
+                <option>HMV</option>
+            </select>
+
+            <input type="date" id="expiryDate">
+
+            <input type="text" id="contact" placeholder="Contact Number">
+
+            <input type="number" id="safetyScore" placeholder="Safety Score">
+
+            <select id="driverStatus">
+                <option>Available</option>
+                <option>On Trip</option>
+                <option>Off Duty</option>
+                <option>Suspended</option>
+            </select>
+
+            <button id="saveDriverBtn">
+                Save Driver
+            </button>
+
+        </div>
+
+        <!-- Table -->
+
+        <div class="table-card">
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Driver</th>
+                        <th>License</th>
+                        <th>Category</th>
+                        <th>Expiry</th>
+                        <th>Contact</th>
+                        <th>Safety</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+
+                <tbody id="driverTable">
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </main>
+
+</div>
+
+<script src="js/sidebar.js"></script>
+<script src="js/storage.js"></script>
+<script src="js/drivers.js"></script>
 
 </body>
-
 </html>

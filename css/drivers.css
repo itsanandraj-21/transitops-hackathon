@@ -1,0 +1,97 @@
+.page-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:25px;
+}
+
+.page-header h1{
+    font-size:32px;
+}
+
+.page-header p{
+    color:gray;
+}
+
+.add-btn{
+    background:#f59e0b;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+.search-row{
+    margin-bottom:20px;
+}
+
+.search-row input{
+    width:350px;
+    padding:12px;
+    border:1px solid #ddd;
+    border-radius:10px;
+}
+
+.driver-form{
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    margin-bottom:25px;
+
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+}
+
+.driver-form input,
+.driver-form select{
+    padding:12px;
+    border:1px solid #ddd;
+    border-radius:10px;
+}
+
+.driver-form button{
+    background:#f59e0b;
+    color:white;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+.hidden{
+    display:none;
+}
+
+.table-card{
+    background:white;
+    padding:20px;
+    border-radius:20px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+th,
+td{
+    padding:18px;
+    border-bottom:1px solid #eee;
+}
+
+.available{
+    color:#16a34a;
+}
+
+.trip{
+    color:#2563eb;
+}
+
+.off{
+    color:#6b7280;
+}
+
+.suspended{
+    color:#ea580c;
+}

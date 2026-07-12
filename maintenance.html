@@ -1,72 +1,173 @@
-<main class="main-content">
+<!DOCTYPE html>
+<html lang="en">
 
-    <div class="maintenance-grid">
+<head>
 
-        <div class="maintenance-form-card">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-            <h2>Log Service Record</h2>
+    <title>Maintenance</title>
 
-            <select id="vehicleSelect"></select>
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/maintenance.css">
 
-            <input
-                id="serviceType"
-                placeholder="Service Type"
-            >
+</head>
 
-            <input
-                id="cost"
-                type="number"
-                placeholder="Cost"
-            >
+<body>
 
-            <input
-                id="date"
-                type="date"
-            >
+    <div class="app">
 
-            <select id="status">
+        <!-- Sidebar -->
+        <div id="sidebar-container"></div>
 
-                <option value="In Shop">
-                    In Shop
-                </option>
+        <!-- Main Content -->
+        <main class="main-content">
 
-                <option value="Completed">
-                    Completed
-                </option>
+            <!-- Top Bar -->
+            <div class="topbar">
 
-            </select>
+                <input
+                    type="text"
+                    placeholder="Search maintenance records..."
+                    class="search-box"
+                >
 
-            <button id="saveBtn">
-                Save Record
-            </button>
+                <div class="profile">
 
-            <div class="rules">
+                    <span>Dispatcher</span>
 
-                <p class="available">
-                    Available → In Shop
-                </p>
+                    <div class="avatar">
+                        AR
+                    </div>
 
-                <p class="shop">
-                    In Shop → Available
-                </p>
-
-                <small>
-                    Vehicles in shop are removed
-                    from dispatch pool.
-                </small>
+                </div>
 
             </div>
 
-        </div>
+            <!-- Page Title -->
+            <div class="page-header">
 
-        <div class="service-card">
+                <h1>Maintenance Operations</h1>
 
-            <h2>Service Log</h2>
+                <p>
+                    Manage service records and vehicle maintenance history.
+                </p>
 
-            <div id="serviceList"></div>
+            </div>
 
-        </div>
+            <!-- Main Grid -->
+            <div class="maintenance-grid">
+
+                <!-- Left Side -->
+                <div class="maintenance-form-card">
+
+                    <h2>Log Service Record</h2>
+
+                    <label>Vehicle</label>
+                    <select id="vehicleSelect">
+                        <option>Select Vehicle</option>
+                    </select>
+
+                    <label>Service Type</label>
+                    <input
+                        type="text"
+                        id="serviceType"
+                        placeholder="Oil Change"
+                    >
+
+                    <label>Cost</label>
+                    <input
+                        type="number"
+                        id="cost"
+                        placeholder="2500"
+                    >
+
+                    <label>Date</label>
+                    <input
+                        type="date"
+                        id="date"
+                    >
+
+                    <label>Status</label>
+                    <select id="status">
+
+                        <option value="In Shop">
+                            In Shop
+                        </option>
+
+                        <option value="Completed">
+                            Completed
+                        </option>
+
+                    </select>
+
+                    <button id="saveBtn">
+                        Save Record
+                    </button>
+
+                    <div class="maintenance-rules">
+
+                        <p class="green-text">
+                            Available ➜ In Shop
+                        </p>
+
+                        <p class="orange-text">
+                            In Shop ➜ Available
+                        </p>
+
+                        <small>
+                            Vehicles in shop are removed
+                            from the dispatch pool.
+                        </small>
+
+                    </div>
+
+                </div>
+
+                <!-- Right Side -->
+                <div class="service-card">
+
+                    <h2>Service Log</h2>
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+                                <th>Vehicle</th>
+                                <th>Service</th>
+                                <th>Cost</th>
+                                <th>Date</th>
+                                <th>Status</th>
+                            </tr>
+
+                        </thead>
+
+                        <tbody id="serviceTable">
+
+                            <!-- JS inserts rows here -->
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+        </main>
 
     </div>
 
-</main>
+    <!-- Scripts -->
+
+    <script src="js/sidebar.js"></script>
+
+    <script src="js/storage.js"></script>
+
+    <script src="js/maintenance.js"></script>
+
+</body>
+
+</html>

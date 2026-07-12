@@ -17,6 +17,10 @@ ul{
     list-style:none;
 }
 
+/* =========================
+   SIDEBAR
+========================= */
+
 .sidebar{
     width:260px;
     min-height:100vh;
@@ -28,8 +32,23 @@ ul{
     top:0;
 }
 
+/* =========================
+   LOGO SECTION
+========================= */
+
 .logo-section{
     margin-bottom:50px;
+}
+
+.transitops-sidebar-home-link{
+    text-decoration:none;
+    color:inherit;
+    display:block;
+}
+
+.transitops-sidebar-home-link:hover{
+    opacity:0.95;
+    cursor:pointer;
 }
 
 .logo{
@@ -47,6 +66,10 @@ ul{
     margin-top:5px;
 }
 
+/* =========================
+   MENU
+========================= */
+
 .menu li{
     margin-bottom:10px;
 }
@@ -63,4 +86,35 @@ ul{
 .menu li a:hover{
     background:#fff7ed;
     color:#f59e0b;
+}
+
+/* Active menu item (optional) */
+
+.menu li a.active{
+    background:#fff7ed;
+    color:#f59e0b;
+    font-weight:600;
+}
+
+/* Logout styling */
+
+#logoutBtn:hover{
+    background:#fee2e2;
+    color:#dc2626;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:768px){
+
+    .sidebar{
+        width:220px;
+    }
+
+    .logo{
+        font-size:30px;
+    }
+
 }
